@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TrainMind - Conectando con Strava...</title>
+</head>
+<body>
+  <p>Conectando con Strava, espera un momento...</p>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    if (code) {
+      window.location.href = 'trainmindai://callback?code=' + code;
+    }
+  </script>
+</body>
+</html>
