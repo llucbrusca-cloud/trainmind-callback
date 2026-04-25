@@ -8,8 +8,9 @@
   <script>
     const params = new URLSearchParams(window.location.search);
     const code = params.get('code');
-    if (code) {
-      window.location.href = 'trainmindai://callback?code=' + code;
+    const state = params.get('state');
+    if (code && state) {
+      window.location.href = 'trainmindai://callback?code=' + code + '&user_id=' + state;
     }
   </script>
 </body>
