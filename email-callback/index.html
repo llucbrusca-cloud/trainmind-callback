@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TrainMind - Confirmando email...</title>
+</head>
+<body>
+  <script>
+    // Recoge todos los parámetros de la URL
+    const params = new URLSearchParams(window.location.search);
+    const hash = window.location.hash;
+    
+    // Redirige a la app con todos los parámetros
+    const deepLink = 'trainmindai://email-callback?' + params.toString() + hash;
+    window.location.href = deepLink;
+  </script>
+  <p>Redirigiendo a TrainMind...</p>
+</body>
+</html>
